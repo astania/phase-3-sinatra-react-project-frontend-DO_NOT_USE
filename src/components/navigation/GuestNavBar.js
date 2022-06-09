@@ -5,8 +5,8 @@ const style = {
     margin: "5% 0 1%",
     padding: "1em",
     textDecoration: "none",
-    color: "white",
-    backgroundColor: "black",
+    color: "black",
+    backgroundColor: "rgb(2555, 120, 44)",
     fontWeight: "bold",
     verticalAlign: "center"
 }
@@ -30,9 +30,26 @@ const Navbar = () => {
             }}
                 exact
                 style={style}
-                to="/plants"
-            >About</NavLink>
-            
+                to="/guest/restaurants"
+            >Restaurants</NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact
+                style={style}
+                to="/guest/reservations"
+            >My Reservations</NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact
+                style={style}
+                to="/guest/profile"
+            >Profile</NavLink>
         </div>
     )
 }

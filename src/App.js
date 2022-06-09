@@ -6,7 +6,7 @@
 //   }
 // })
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './components/logins/home'
+import Home from './components/logins/Home'
 import Footer from './components/navigation/Footer'
 import Header from './components/navigation/Header'
 import NavBar from './components/navigation/NavBar'
@@ -16,10 +16,12 @@ import GuestProfile from './components/guestInfo/GuestProfile'
 import ReservationForm from './components/reservationInfo/ReservationForm'
 import ReservationCard from './components/reservationInfo/ReservationCard'
 import ReservationList from './components/reservationInfo/ReservationList'
-import RestaurantList from './components/restaurantInfo/RestaurantList'
+import RestaurantList from './components/restaurantInfo/RestaurantsList'
 import RestaurantForm from './components/restaurantInfo/RestaurantForm'
 import RestaurantCard from './components/restaurantInfo/RestaurantCard'
 import RestaurantProfile from './components/restaurantInfo/RestaurantProfile'
+import GuestNavBar from './components/navigation/GuestNavBar'
+import RestaurantNavBar from './components/navigation/RestaurantNavBar'
 
 
 
@@ -29,49 +31,67 @@ const App = () => {
   return (
     <div>
       <Router>
-        <NavBar />
+
         <Header slogan="Never wait for a table again!" storeName="Reservation World" />
 
         <Switch>
 
-          <Route exact path="/guest/new">
+          <Route path="/guests/new">
+            <GuestNavBar />
             <GuestForm />
           </Route>
 
-          <Route exact path="/restaurant/new">
+          <Route path="/restaurants/new">
+            <RestaurantNavBar />
             <RestaurantForm />
           </Route>
 
-          <Route exact path="/reservation/new">
+          <Route path="/reservations/new">
+            <GuestNavBar />
             <ReservationForm />
           </Route>
 
-          <Route exact path="/reservation/:id">
+          <Route path="/reservation/:id">
+            <GuestNavBar />
             <ReservationCard />
           </Route>
 
-          <Route exact path="/restaurant/:id">
+          <Route path="/restaurant/:id">
+            <GuestNavBar />
             <RestaurantCard />
           </Route>
 
-          <Route exact path="/guest/:id">
+          <Route path="/guest/:id">
             <GuestCard />
           </Route>
 
-          <Route exact path="/restaurant/profile">
+          <Route  path="/restaurant/profile">
+            <GuestNavBar />
             <RestaurantProfile />
           </Route>
 
-          <Route exact path="/guest/profile">
+          <Route path="/guest/profile">
+          <GuestNavBar />
             <GuestProfile />
           </Route>
 
-          <Route path="/*">
-            {"404 Not Found"}
+          <Route path="/restaurants">
+          <GuestNavBar />
+            <RestaurantList />
+          </Route>
+
+          <Route path="/guest/reservations">
+          <GuestNavBar />
+            <ReservationList />
           </Route>
         
           <Route exact path="/">
+            <NavBar />
             <Home />
+          </Route>
+          
+          <Route path="*">
+            {"404 Not Found"}
           </Route>
 
 
