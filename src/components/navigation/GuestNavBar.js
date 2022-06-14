@@ -30,7 +30,7 @@ const Navbar = () => {
             }}
                 exact
                 style={style}
-                to="/guest/restaurants"
+                to="/guests/restaurants"
             >Restaurants</NavLink>
             <NavLink
             activeStyle={{
@@ -39,7 +39,7 @@ const Navbar = () => {
             }}
                 exact
                 style={style}
-                to="/guest/reservations"
+                to="/guests/reservations"
             >My Reservations</NavLink>
             <NavLink
             activeStyle={{
@@ -48,7 +48,7 @@ const Navbar = () => {
             }}
                 exact
                 style={style}
-                to="/guest/profile"
+                to="/guests/profile"
             >Profile</NavLink>
         </div>
     )

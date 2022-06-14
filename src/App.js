@@ -13,6 +13,7 @@ import NavBar from './components/navigation/NavBar'
 import GuestForm from './components/guestInfo/GuestForm'
 import GuestCard from './components/guestInfo/GuestCard'
 import GuestProfile from './components/guestInfo/GuestProfile'
+import GuestLogInPage from './components/guestInfo/GuestLogInPage'
 import ReservationForm from './components/reservationInfo/ReservationForm'
 import ReservationCard from './components/reservationInfo/ReservationCard'
 import ReservationList from './components/reservationInfo/ReservationList'
@@ -20,6 +21,7 @@ import RestaurantList from './components/restaurantInfo/RestaurantsList'
 import RestaurantForm from './components/restaurantInfo/RestaurantForm'
 import RestaurantCard from './components/restaurantInfo/RestaurantCard'
 import RestaurantProfile from './components/restaurantInfo/RestaurantProfile'
+import RestaurantLogInPage from './components/restaurantInfo/RestaurantLogInPage'
 import GuestNavBar from './components/navigation/GuestNavBar'
 import RestaurantNavBar from './components/navigation/RestaurantNavBar'
 
@@ -46,50 +48,62 @@ const App = () => {
             <RestaurantForm />
           </Route>
 
+          <Route path="/restaurants/:id">
+            <GuestNavBar />
+            <RestaurantCard />
+          </Route>
+
+          <Route path="/restaurants/profile">
+            <GuestNavBar />
+            <RestaurantProfile />
+          </Route>
+
           <Route path="/reservations/new">
             <GuestNavBar />
             <ReservationForm />
           </Route>
 
-          <Route path="/reservation/:id">
+          <Route path="/reservations/:id">
             <GuestNavBar />
             <ReservationCard />
           </Route>
 
-          <Route path="/restaurant/:id">
-            <GuestNavBar />
-            <RestaurantCard />
-          </Route>
-
-          <Route path="/guest/:id">
+          <Route path="/guests/:id">
             <GuestCard />
-          </Route>
-
-          <Route  path="/restaurant/profile">
-            <GuestNavBar />
-            <RestaurantProfile />
-          </Route>
-
-          <Route path="/guest/profile">
-          <GuestNavBar />
             <GuestProfile />
           </Route>
 
-          <Route path="/restaurants">
-          <GuestNavBar />
+          <Route path="/guests/reservations">
+            <GuestNavBar />
+            <ReservationList />
+          </Route>
+
+          <Route path="/guests/profile">
+            <GuestNavBar />
+            <GuestProfile />
+          </Route>
+
+          <Route path="/guests/restaurants">
+            <GuestNavBar />
             <RestaurantList />
           </Route>
 
-          <Route path="/guest/reservations">
-          <GuestNavBar />
-            <ReservationList />
+          <Route exact path="/guests">
+            <GuestNavBar />
+            <GuestLogInPage />
           </Route>
-        
+
+          <Route exact path="/restaurants">
+            <RestaurantNavBar />
+            <RestaurantLogInPage />
+
+          </Route>
+
           <Route exact path="/">
             <NavBar />
             <Home />
           </Route>
-          
+
           <Route path="*">
             {"404 Not Found"}
           </Route>
