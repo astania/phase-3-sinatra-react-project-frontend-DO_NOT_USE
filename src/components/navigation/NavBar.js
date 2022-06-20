@@ -30,7 +30,7 @@ const Navbar = () => {
             }}
                 exact
                 style={style}
-                to="/plants"
+                to="/about"
             >About</NavLink>
             
         </div>
