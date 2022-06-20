@@ -22,16 +22,39 @@ import RestaurantForm from './components/restaurantInfo/RestaurantForm'
 import RestaurantCard from './components/restaurantInfo/RestaurantCard'
 import RestaurantProfile from './components/restaurantInfo/RestaurantProfile'
 import RestaurantLogInPage from './components/restaurantInfo/RestaurantLogInPage'
-
-import RestaurantNavBar from './components/navigation/RestaurantNavBar'
-
-
+import {useState, useEffect} from "react"
 
 
 const App = () => {
   // const classes = useStyles()
+
+  const [restaurants, setRestaurants] = useState([])
+  const [guests, setGuests] = useState([])
+
+  const [restaurantsLoading, setRestaurantsLoading] = useState(true)
+  const [guestsLoading, setGuestsLoading] = useState(true)
+  
+  useEffect(() => {
+    
+
+    fetch("http://localhost:9292/restaurants")
+      .then(r => r.json())
+      .then(fetchedRestaurants => setRestaurants(fetchedRestaurants))
+      .then(setRestaurantsLoading(false))
+  }, [])
+
+  useEffect(()=>{
+    fetch("http://localhost:9292/restaurants")
+      .then(r => r.json())
+      .then(fetchedGuests => setGuests(fetchedGuests))
+      .then(setGuestsLoading(false))
+  })
+
+  if(loading) return (<h1>Loading...</h1>)
+  
   return (
     <div>
+
       <Router>
 
         <Header slogan="Never wait for a table again!" storeName="Reservation World" />
@@ -64,7 +87,6 @@ const App = () => {
 
           <Route path="/guests/:id">
             <GuestCard />
-            <GuestProfile />
           </Route>
 
           <Route path="/guests/reservations">
