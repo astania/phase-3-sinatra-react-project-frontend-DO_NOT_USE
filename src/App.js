@@ -39,32 +39,26 @@ const App = () => {
         <Switch>
 
           <Route path="/guests/new">
-            <GuestNavBar />
             <GuestForm />
           </Route>
 
           <Route path="/restaurants/new">
-            <RestaurantNavBar />
             <RestaurantForm />
           </Route>
 
           <Route path="/restaurants/:id">
-            <GuestNavBar />
             <RestaurantCard />
           </Route>
 
           <Route path="/restaurants/profile">
-            <GuestNavBar />
             <RestaurantProfile />
           </Route>
 
           <Route path="/reservations/new">
-            <GuestNavBar />
             <ReservationForm />
           </Route>
 
           <Route path="/reservations/:id">
-            <GuestNavBar />
             <ReservationCard />
           </Route>
 
@@ -74,27 +68,22 @@ const App = () => {
           </Route>
 
           <Route path="/guests/reservations">
-            <GuestNavBar />
             <ReservationList />
           </Route>
 
           <Route path="/guests/profile">
-            <GuestNavBar />
             <GuestProfile />
           </Route>
 
           <Route path="/guests/restaurants">
-            <GuestNavBar />
             <RestaurantList />
           </Route>
 
           <Route exact path="/guests">
-            <GuestNavBar />
             <GuestLogInPage />
           </Route>
 
           <Route exact path="/restaurants">
-            <RestaurantNavBar />
             <RestaurantLogInPage />
 
           </Route>
