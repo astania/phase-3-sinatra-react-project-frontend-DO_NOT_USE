@@ -22,7 +22,7 @@ import RestaurantForm from './components/restaurantInfo/RestaurantForm'
 import RestaurantCard from './components/restaurantInfo/RestaurantCard'
 import RestaurantProfile from './components/restaurantInfo/RestaurantProfile'
 import RestaurantLogInPage from './components/restaurantInfo/RestaurantLogInPage'
-import GuestNavBar from './components/navigation/GuestNavBar'
+
 import RestaurantNavBar from './components/navigation/RestaurantNavBar'
 
 

@@ -1,8 +1,13 @@
+import RestaurantNavBar from '../navigation/RestaurantNavBar'
 
 
 const RestaurantProfile = () => {
   return (
-    <div>RestaurantProfile</div>
+    <div>
+      <RestaurantNavBar/>
+      <div>RestaurantProfile</div>
+    </div>
+    
   )
 }
 

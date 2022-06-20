@@ -1,8 +1,12 @@
-
+import GuestNavBar from '../navigation/GuestNavBar'
 
 const GuestForm = () => {
   return (
-    <div>GuestForm</div>
+    <div>
+        <GuestNavBar/>
+        <div>GuestForm</div>
+
+    </div>
   )
 }
 

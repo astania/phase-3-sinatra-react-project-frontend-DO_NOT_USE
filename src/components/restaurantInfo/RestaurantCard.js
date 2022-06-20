@@ -1,8 +1,12 @@
-
+import RestaurantNavBar from '../navigation/RestaurantNavBar'
 
 const RestaurantCard = () => {
   return (
-    <div>RestaurantCard</div>
+    <div>
+      <RestaurantNavBar/>
+      <div>RestaurantCard</div>
+    </div>
+    
   )
 }
 

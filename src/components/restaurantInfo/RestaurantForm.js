@@ -1,8 +1,13 @@
+import RestaurantNavBar from '../navigation/RestaurantNavBar'
 
 
 const RestaurantForm = () => {
   return (
-    <div>RestaurantForm</div>
+    <div>
+      <RestaurantNavBar/>
+      <div>RestaurantForm</div>
+    </div>
+    
   )
 }
 

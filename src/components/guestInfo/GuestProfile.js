@@ -1,8 +1,13 @@
-import React from 'react'
+import GuestNavBar from '../navigation/GuestNavBar'
+
 
 const GuestProfile = () => {
   return (
-    <div>GuestProfile</div>
+    <div>
+      <GuestNavBar/>
+      <div>GuestProfile</div>
+    </div>
+    
   )
 }
 

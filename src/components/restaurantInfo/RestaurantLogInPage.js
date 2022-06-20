@@ -1,8 +1,13 @@
+import RestaurantNavBar from '../navigation/RestaurantNavBar'
 
 
 const RestaurantLogInPage = () => {
   return (
-    <div>RestaurantLogInPage</div>
+    <div>
+      <RestaurantNavBar/>
+      <div>RestaurantLogInPage</div>
+    </div>
+    
   )
 }
 

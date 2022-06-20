@@ -1,8 +1,12 @@
-
+<div>RestaurantProfile</div>
 
 const RestaurantsList = () => {
   return (
-    <div>RestaurantsList</div>
+    <div>
+      <RestaurantNavBar />
+      <div>RestaurantsList</div>
+    </div>
+    
   )
 }
 

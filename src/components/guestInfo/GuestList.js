@@ -1,9 +1,14 @@
-
+import GuestNavBar from '../navigation/GuestNavBar'
 
 const GuestList = () => {
   return (
-    <div>GuestList</div>
+    <div>
+      <GuestNavBar/>
+      <div>GuestList</div>
+  
+    </div>
   )
+    
 }
 
 export default GuestList
